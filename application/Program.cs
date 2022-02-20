@@ -8,17 +8,11 @@ namespace application
     {
         static void Main(string[] args)
         {
-            //PositiveIntegerComparer comparer = new PositiveIntegerComparer();
-            //CompareResultRegistry compareRegistry = comparer.Compare(7, 4);
-            //CompareResultsInterpretator resultInterptetator = new CompareResultsInterpretator(compareRegistry);
-
-
             PositiveIntegerComparer comparer = new PositiveIntegerComparer();
-
-            CompareResultRegistry compareRegistry = comparer.Compare(1000, 10000);
+            CompareResultRegistry compareRegistry = comparer.Compare(7, 4);
             CompareResultsInterpretator resultInterptetator = new CompareResultsInterpretator(compareRegistry);
-            Console.WriteLine(resultInterptetator.IsGreaterOrEqual());
 
+            Console.WriteLine(resultInterptetator.IsGreater());
         }
     }
 }
