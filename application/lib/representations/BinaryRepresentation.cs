@@ -44,7 +44,8 @@ namespace application.lib.representations
             if (length == null)
             { 
                 length = 0;
-                foreach (ushort digit in this)
+                IEnumerator enumerator = GetEnumerator();
+                while (enumerator.MoveNext())
                 {
                     length++;
                 }
@@ -53,7 +54,7 @@ namespace application.lib.representations
         }
         public override ushort GetValueTypeSizeInBytes()
         {
-            return sizeof(int);
+            return sizeof(ushort);
         }
         public override ushort GetValueTypeSizeInBits()
         {

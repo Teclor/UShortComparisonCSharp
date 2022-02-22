@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\application\application.csproj" />
     <ProjectReference Include="..\dotnetcomparison\application\application.csproj" />
   </ItemGroup>
 
